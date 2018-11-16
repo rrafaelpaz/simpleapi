@@ -33,8 +33,6 @@ jobs:
           command: cf target -o Rafael-186420 -s development
           name: "Setting up Org and target space"
       - 
-        run: cf routes
-      - 
         run: 
           command: cd /tmp/app/build/libs && cf push simpleapi -p rafaelsimpleapi-0.0.1-SNAPSHOT.jar
           name: "Pushing app"
