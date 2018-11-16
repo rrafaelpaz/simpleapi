@@ -33,7 +33,7 @@ jobs:
           command: cf target -o rafaelpaz -s rafaelTargetSpace
           name: "Setting up Org and target space"
       -
-        run: cf create-route rafaelTargetSpace shared-simpleapi.com.au --hostname simpleapi
+        run: cf create-route rafaelTargetSpace shared-simpleapi --hostname simpleapi
       - 
         run: 
           command: cd /tmp/app/build/libs && cf push simpleapi -p rafaelsimpleapi-0.0.1-SNAPSHOT.jar
